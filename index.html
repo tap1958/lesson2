@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
@@ -10,11 +10,11 @@
   <script defer src="scripts/script.js"></script>
 </head>
 <body>
-  <h1 class="hidden" hidden >Lesson 2</h1> <!-- это скрытый блок h1 -->
+  <h1 class="hidden-h1" hidden >Lesson 2</h1> <!-- это скрытый блок h1 -->
   <header class="header"> <!-- это блок -->
     <div class="header-top-wrapper"> <!-- просто обёртка -->
       <div class="header-left"> <!-- это блок, вложенный в блок header -->
-        <ol class="header-left__list">
+        <ul class="header-left__list">
           <li class="header-left__item">
             <a class="header-left__link header-left__link_login" href="#">Вход</a>
           </li>
@@ -22,7 +22,7 @@
             <a class="header-left__link header-left__link_favorites" href="#">Избранное</a></li>
           <li class="header-left__item">
             <a class="header-left__link header-left__link_compare" href="#">Сравнение</a></li>
-        </ol>  
+        </ul>  
       </div>
       <div class="header-social"> <!-- это блок, вложенный в блок header -->
         <ul class="header-social__list">
@@ -43,8 +43,8 @@
       <div class="header-logo"> <!-- это блок, вложенный в блок header -->
         <a class="header-logo__link" href="/">
           <img class="header-logo__img" src="#" alt="logo">
-          <span class="header-logo__txt">Nalabuten.ah</span>
-          <span class="header-logo__txt">unrealizable</span>
+          <div class="header-logo__txt">Nalabuten.ah</div>
+          <div class="header-logo__txt">unrealizable</div>
         </a>
       </div>
       <div class="header-contacts"> <!-- это блок, вложенный в блок header -->
@@ -65,7 +65,7 @@
   
       <div class="header-checkout"> <!-- это блок, вложенный в блок header -->
         <output class="header-checkout__total">7 500 р.</output>
-        <div class="header-checkout__cart" data-count="2"></div>
+        <a class="header-checkout__cart" data-count="2" title="корзина"></a>
       </div>
     </div>  
   </header>
@@ -81,15 +81,15 @@
   </nav>
 
   <main class="main">
-    <section class="main-slider"> <!-- это блок, вложенный в блок main -->
+    <div class="main-slider"> <!-- это блок, вложенный в блок main -->
       <img class="main-slider__picture" src="#"  alt="Labuten">
-      <h2 class="main-slider__name">Labuten Cherry</h2>
+      <div class="main-slider__name">Labuten Cherry</div>
       <div class="main-slider__name-new">новая весенняя коллекция</div>
       <p class="main-slider__name-text">
         Мы рады вам представить новую коллекцию туфель от знаменитого дизайнера-модельера Кристиана
       </p>
       <a class="main-slider__buy-now" href="#">купить сейчас</a>
-    </section>
+    </div>
 
     <div class="main-offers"> <!-- это блок, вложенный в блок main -->
       <a class="main-offers__selling" href="#">
@@ -106,93 +106,105 @@
       </a>
     </div>
 
-    <section class="main-news"> <!-- это блок, вложенный в блок main -->
-      <h2 class="main-news__name">Новинки</h2>
-      <figure class="main-news__item">
-        <figcaption class="main-news__item-title">Labuten-lady</figcaption>
-        <div class="main-news__item-info"></div>
-        <img class="main-news__item-img" src="#" alt="Labuten">
-        <output class="main-news__item-price">35 000 р.</output>
-        <div class="main-news-block">
-          <span class="main-news-item__txt">В корзину</span>
-          <button class="main-news-item__button" type="submit" title="Выполнить"></button>
+    <div class="main-news"> <!-- это блок, вложенный в блок main -->
+      <div class="main-news__name">Новинки</div>
+      <figure class="main-news-card"> <!-- это отдельный блок, вложенный в блок main-news -->
+        <div class="main-news-card__info">new</div>
+        <img class="main-news-card__img" src="#" alt="Labuten">
+        <output class="main-news-card__price">35 000 р.</output>
+        <div class="main-news-card-block">
+          <span class="main-news-card__txt">В корзину</span>
+          <button class="main-news-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-news-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-      <figure class="main-news__item">
-        <figcaption class="main-news__item-title">Labuten-lady</figcaption>
-        <div class="main-news__item-info"></div>
-        <img class="main-news__item-img" src="#" alt="Labuten">
-        <output class="main-news__item-price">35 000 р.</output>
-        <div class="main-news-block">
-          <span class="main-news-item__txt">В корзину</span>
-          <button class="main-news-item__button" type="submit" title="Выполнить"></button>
+      <figure class="main-news-card">
+        <div class="main-news-card__info">new</div>
+        <img class="main-news-card__img" src="#" alt="Labuten">
+        <output class="main-news-card__price">35 000 р.</output>
+        <div class="main-news-card-block">
+          <span class="main-news-card__txt">В корзину</span>
+          <button class="main-news-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-news-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-      <figure class="main-news__item">
-        <figcaption class="main-news__item-title">Labuten-lady</figcaption>
-        <div class="main-news__item-info"></div>
-        <img class="main-news__item-img" src="#" alt="Labuten">
-        <output class="main-news__item-price">35 000 р.</output>
-        <div class="main-news-block">
-          <span class="main-news-item__txt">В корзину</span>
-          <button class="main-news-item__button" type="submit" title="Выполнить"></button>
+      <figure class="main-news-card">
+        <div class="main-news-card__info">new</div>
+        <img class="main-news-card__img" src="#" alt="Labuten">
+        <output class="main-news-card__price">35 000 р.</output>
+        <div class="main-news-card-block">
+          <span class="main-news-card__txt">В корзину</span>
+          <button class="main-news-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-news-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-      <figure class="main-news__item">
-        <figcaption class="main-news__item-title">Labuten-lady</figcaption>
-        <div class="main-news__item-info"></div>
-        <img class="main-news__item-img" src="#" alt="Labuten">
-        <output class="main-news__item-price">35 000 р.</output>
-        <div class="main-news-block">
-          <span class="main-news-item__txt">В корзину</span>
-          <button class="main-news-item__button" type="submit" title="Выполнить"></button>
+      <figure class="main-news-card">
+        <div class="main-news-card__info">new</div>
+        <img class="main-news-card__img" src="#" alt="Labuten">
+        <output class="main-news-card__price">35 000 р.</output>
+        <div class="main-news-card-block">
+          <span class="main-news-card__txt">В корзину</span>
+          <button class="main-news-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-news-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-    </section>
+    </div>
 
-    <section class="main-discount"> <!-- это блок, вложенный в блок main -->
-      <h2 class="main-discount__name">Товары со скидкой</h2>
-      <figure class="main-discount__item">
-        <figcaption class="main-discount__item-title">Labuten-lady</figcaption>
-        <div class="main-discount__item-info"></div>
-        <img class="main-discount__item-img" src="#" alt="Labuten">
-        <output class="main-discount__item-price">35 000 р. <sup><del>42 700 р.</del></sup></output>
-        <div class="main-discount-block">
-          <span class="main-discount-item__txt">В корзину</span>
-          <button class="main-discount-item__button" type="submit" title="Выполнить"></button>
+    <div class="main-discount"> <!-- это блок, вложенный в блок main -->
+      <div class="main-discount__name">Товары со скидкой</div>
+      <figure class="main-discount-card"> <!-- это отдельный блок, вложенный в блок main-discount -->
+        <div class="main-discount-card__info">-10%</div>
+        <img class="main-discount-card__img" src="#" alt="Labuten">
+        <div class="main-discount-card-price">
+          <output class="main-discount-card__new-price">35 000 р.</output>
+          <output class="main-discount-card__old-price"><sup><del>42 700 р.</del></sup></output>
         </div>
-      </figure>
-      <figure class="main-discount__item">
-        <figcaption class="main-discount__item-title">Labuten-lady</figcaption>
-        <div class="main-discount__item-info"></div>
-        <img class="main-discount__item-img" src="#" alt="Labuten">
-        <output class="main-discount__item-price">35 000 р. <sup><del>42 700 р.</del></sup></output>
-        <div class="main-discount-block">
-          <span class="main-discount-item__txt">В корзину</span>
-          <button class="main-discount-item__button" type="submit" title="Выполнить"></button>
+        <div class="main-discount-card-block">
+          <span class="main-discount-card__txt">В корзину</span>
+          <button class="main-discount-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-discount-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-      <figure class="main-discount__item">
-        <figcaption class="main-discount__item-title">Labuten-lady</figcaption>
-        <div class="main-discount__item-info"></div>
-        <img class="main-discount__item-img" src="#" alt="Labuten">
-        <output class="main-discount__item-price">35 000 р. <sup><del>42 700 р.</del></sup></output>
-        <div class="main-discount-block">
-          <span class="main-discount-item__txt">В корзину</span>
-          <button class="main-discount-item__button" type="submit" title="Выполнить"></button>
+      <figure class="main-discount-card">
+        <div class="main-discount-card__info">-10%</div>
+        <img class="main-discount-card__img" src="#" alt="Labuten">
+        <div class="main-discount-card-price">
+          <output class="main-discount-card__new-price">35 000 р.</output>
+          <output class="main-discount-card__old-price"><sup><del>42 700 р.</del></sup></output>
         </div>
-      </figure>
-      <figure class="main-discount__item">
-        <figcaption class="main-discount__item-title">Labuten-lady</figcaption>
-        <div class="main-discount__item-info"></div>
-        <img class="main-discount__item-img" src="#" alt="Labuten">
-        <output class="main-discount__item-price">35 000 р. <sup><del>42 700 р.</del></sup></output>
-        <div class="main-discount-block">
-          <span class="main-discount-item__txt">В корзину</span>
-          <button class="main-discount-item__button" type="submit" title="Выполнить"></button>
+        <div class="main-discount-card-block">
+          <span class="main-discount-card__txt">В корзину</span>
+          <button class="main-discount-card__button" type="submit" title="Выполнить"></button>
         </div>
+        <figcaption class="main-discount-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
-    </section>
+      <figure class="main-discount-card">
+        <div class="main-discount-card__info">-10%</div>
+        <img class="main-discount-card__img" src="#" alt="Labuten">
+        <div class="main-discount-card-price">
+          <output class="main-discount-card__new-price">35 000 р.</output>
+          <output class="main-discount-card__old-price"><sup><del>42 700 р.</del></sup></output>
+        </div>
+        <div class="main-discount-card-block">
+          <span class="main-discount-card__txt">В корзину</span>
+          <button class="main-discount-card__button" type="submit" title="Выполнить"></button>
+        </div>
+        <figcaption class="main-discount-card__title">Labuten-lady</figcaption><!--вставить после img-->
+      </figure>
+      <figure class="main-discount-card">
+        <div class="main-discount-card__info">-10%</div>
+        <img class="main-discount-card__img" src="#" alt="Labuten">
+        <div class="main-discount-card-price">
+          <output class="main-discount-card__new-price">35 000 р.</output>
+          <output class="main-discount-card__old-price"><sup><del>42 700 р.</del></sup></output>
+        </div>
+        <div class="main-discount-card-block">
+          <span class="main-discount-card__txt">В корзину</span>
+          <button class="main-discount-card__button" type="submit" title="Выполнить"></button>
+        </div>
+        <figcaption class="main-discount-card__title">Labuten-lady</figcaption><!--вставить после img-->
+      </figure>
+    </div>
   </main>
   
   <aside class="sidebar">
@@ -244,11 +256,12 @@
       </div>
       <div class="footer-aside-wrapper">
         <div class="footer-aside__heading">Контактная информация</div>
-        <ul class="footer-aside__list">
-          <li class="footer-aside__item"><a class="footer-aside__link" href="tel:+74996549879">Телефон:8(499)654-98-79</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="mailto:info@nalabuten.ah">info@nalabuten.ah</a></li>
-          <li class="footer-aside__item"><address class="footer-aside__address">г.Москва Фантастический проезд д.234</address></li>
-        </ul>
+        <address class="footer-aside__address">
+          <a class="footer-aside__link" href="tel:+74996549879">Телефон:8(499)654-98-79</a>
+          <a class="footer-aside__link" href="mailto:info@nalabuten.ah">info@nalabuten.ah</a>
+          <div class="footer-aside__address">г.Москва Фантастический проезд д.234</div>
+        </address>
+        
       </div>
     </aside>
     <small class="footer-copyright">&copy; Nalabuten.ah 2017</small>
