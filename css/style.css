@@ -1,3 +1,124 @@
-.body {
-  color: #ffffff;
+@font-face{
+  font-family: Roboto;
+  src: url("../fonts/roboto-v19-cyrillic_latin-100.woff2") format('woff2'),
+  url("../fonts/roboto-v19-cyrillic_latin-100.woff") format('woff'),
+  url("../fonts/roboto-v19-cyrillic_latin-100.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
 }
+
+@font-face{
+  font-family: Roboto;
+  src: url("../fonts/roboto-v19-cyrillic_latin-regular.woff2") format('woff2'),
+  url("../fonts/roboto-v19-cyrillic_latin-regular.woff") format('woff'),
+  url("../fonts/roboto-v19-cyrillic_latin-regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+html{
+  --color-1: #ff0000;
+  --color-2: #000;
+  --color-3: #4a4a4a;
+  --color-4: #f4f4f4;
+  --color-5: #ff824a;
+  --color-6: #666666;
+  --color-7: #fff;
+  --color-8: #cecece;
+  --color-9: #37a49e;
+}
+
+body{
+  min-height: 100vh;
+}
+
+h1, h2, h3, p, ul, ol{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~header~~~~~~~~~~~~~~~~~~~~*/
+
+.header{
+  grid-template-rows: 50px 130px 50px;
+  padding: 0 calc(50% - 640px);
+}
+
+.header-first-line{
+  background-color: var(--color-4);
+  min-height: 50px;
+  grid-column: 1 / span 12;
+  grid-row: 1/2;
+}
+.header-contacts__list{
+  display: flex;
+}
+.header-social__list__list{
+  display: flex;
+}
+
+.header-second-line{
+  background-color: var(--color-7);
+  min-height: 130px;
+  grid-column: 1 / span 12;
+  grid-row: 2/3;
+}
+
+.nav{
+  background-color: var(--color-1);
+  min-height: 50px;
+  grid-column: 1 / span 12;
+  grid-row: 3/4;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~main~~~~~~~~~~~~~~~~~~~~~*/
+.main{
+  grid-template-rows: 1fr;
+}
+
+/*~~~~~~~~~~~~~~~~~~footer~~~~~~~~~~~~~~~~~~~~*/
+.footer{
+  grid-template-rows: 220px 35px;
+  padding: 0 calc(50% - 640px);
+}
+.footer-content{
+  background-color: var(--color-3);
+  min-height: 220px;
+  grid-column: 1 / span 12;
+  grid-row: 1/2;
+}
+.footer-copyright{
+  background-color: var(--color-2);
+  min-height: 35px;
+  grid-column: 1 / span 12;
+  grid-row: 2/3;
+}
+

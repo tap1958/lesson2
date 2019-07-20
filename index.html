@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
-  <title>Lesson 2.loc</title>
+  <title>Lesson 2</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
   <script defer src="scripts/script.js"></script>
 </head>
 <body class="body">
   <h1 class="hidden-h1" hidden >Lesson 2</h1> <!-- это скрытый блок h1 -->
-  <header class="header"> <!-- это блок -->
-    <div class="header-top-wrapper"> <!-- просто обёртка -->
+  <header class="container grid-container header"> <!-- это блок -->
+    <div class="header-first-line"> <!-- просто обёртка -->
       <div class="header-left"> <!-- это блок, вложенный в блок header -->
         <ul class="header-left__list">
           <li class="header-left__item">
             <a class="header-left__link header-left__link_login" href="#">Вход</a>
           </li>
           <li class="header-left__item">
-            <a class="header-left__link header-left__link_favorites" href="#">Избранное</a></li>
+            <a class="header-left__link header-left__link_favorites" href="#">Избранное</a>
+          </li>
           <li class="header-left__item">
-            <a class="header-left__link header-left__link_compare" href="#">Сравнение</a></li>
+            <a class="header-left__link header-left__link_compare" href="#">Сравнение</a>
+          </li>
         </ul>  
       </div>
       <div class="header-social"> <!-- это блок, вложенный в блок header -->
@@ -39,7 +41,7 @@
       </div>
     </div>
     
-    <div class="header-middle-wrapper"> <!-- просто обёртка -->
+    <div class="header-second-line"> <!-- просто обёртка -->
       <div class="header-logo"> <!-- это блок, вложенный в блок header -->
         <a class="header-logo__link" href="/">
           <img class="header-logo__img" src="#" alt="logo">
@@ -57,30 +59,29 @@
           </li>
         </ul>
       </div>
-      
       <form class="header-search"> <!-- это блок, вложенный в блок header -->
-        <input type="search" class="header-search__input" placeholder="Введите поисковую фразу">
+        <label class="header-search__input">
+          <input type="search" class="header-search__input" placeholder="Введите поисковую фразу">
+        </label>
         <button type="submit" class="header-search__button" title="Поиск"></button>
       </form>      
-  
       <div class="header-checkout"> <!-- это блок, вложенный в блок header -->
         <output class="header-checkout__total">7 500 р.</output>
         <a class="header-checkout__cart" data-count="2" title="корзина"></a>
       </div>
     </div>  
+  
+    <nav class="nav"> <!-- это блок -->
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Галерея</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Акции</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav class="nav"> <!-- это блок -->
-    <ul class="nav__list">
-      <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Галерея</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Акции</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-    </ul>
-  </nav>
-
-  <main class="main">
+  <main class="container grid-container main">
     <div class="main-slider"> <!-- это блок, вложенный в блок main -->
       <img class="main-slider__picture" src="#"  alt="Labuten">
       <div class="main-slider__name">Labuten Cherry</div>
@@ -205,64 +206,66 @@
         <figcaption class="main-discount-card__title">Labuten-lady</figcaption><!--вставить после img-->
       </figure>
     </div>
+   
+    <aside class="sidebar">
+      <div class="sidebar-content-wrapper">
+        <h2 class="sidebar__heading">Категории</h2>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Вечерниее</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Свадебные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Бальные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Повседневные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Особенные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Обыкновенные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Оригинальные</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Космические</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-advertising">
+        <a class="sidebar-advertising__link" href="#"><img class="sidebar-advertising__image" src="#" alt=""></a>
+        <a class="sidebar-advertising__link" href="#"><img class="sidebar-advertising__image" src="#" alt=""></a>
+      </div>  
+    </aside>
   </main>
   
-  <aside class="sidebar">
-    <div class="sidebar-content-wrapper">
-      <h2 class="sidebar__heading">Категории</h2>
-      <ul class="sidebar__list">
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Вечерниее</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Свадебные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Бальные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Повседневные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Особенные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Обыкновенные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Оригинальные</a></li>
-        <li class="sidebar__item"><a class="sidebar__link" href="#">Космические</a></li>
-      </ul>
+  <footer class="container grid-container footer">
+    <div class="footer-content">
+      <div class="footer-logo"> <!-- это блок, вложенный в блок footer -->
+        <a class="footer-logo__link" href="/">
+          <img class="footer-logo__img" src="#" alt="logo">
+          <span class="footer-logo__txt">Nalabuten.ah</span>
+          <span class="footer-logo__txt">unrealizable dreams</span>
+        </a>
+      </div>
+      <aside class="footer-aside"> <!-- это блок, вложенный в блок footer -->
+        <div class="footer-aside-wrapper">
+          <div class="footer-aside__heading">Меню</div>
+          <ul class="footer-aside__list">
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Главная</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Каталог</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Галерея</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Акции</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-aside-wrapper">
+          <div class="footer-aside__heading">Способы оплаты</div>
+          <ul class="footer-aside__list">
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Наличными</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">Visa или Mastercard</a></li>
+            <li class="footer-aside__item"><a class="footer-aside__link" href="#">В кредит</a></li>
+          </ul>
+        </div>
+        <div class="footer-aside-wrapper">
+          <div class="footer-aside__heading">Контактная информация</div>
+          <address class="footer-aside__address">
+            <a class="footer-aside__link" href="tel:+74996549879">Телефон:8(499)654-98-79</a>
+            <a class="footer-aside__link" href="mailto:info@nalabuten.ah">info@nalabuten.ah</a>
+            <div class="footer-aside__address">г.Москва Фантастический проезд д.234</div>
+          </address>
+        </div>
+      </aside>
     </div>
-    <div class="sidebar-advertising">
-      <a class="sidebar-advertising__link" href="#"><img class="sidebar-advertising__image" src="#" alt=""></a>
-      <a class="sidebar-advertising__link" href="#"><img class="sidebar-advertising__image" src="#" alt=""></a>
-    </div>  
-  </aside>
-  
-  <footer class="footer">
-    <div class="footer-logo"> <!-- это блок, вложенный в блок footer -->
-      <a class="footer-logo__link" href="/">
-        <img class="footer-logo__img" src="#" alt="logo">
-        <span class="footer-logo__txt">Nalabuten.ah</span>
-        <span class="footer-logo__txt">unrealizable dreams</span>
-      </a>
-    </div>    
-    <aside class="footer-aside"> <!-- это блок, вложенный в блок footer -->
-      <div class="footer-aside-wrapper">
-        <div class="footer-aside__heading">Меню</div>
-        <ul class="footer-aside__list">
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Главная</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Каталог</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Галерея</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Акции</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-aside-wrapper">
-        <div class="footer-aside__heading">Способы оплаты</div>
-        <ul class="footer-aside__list">
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Наличными</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">Visa или Mastercard</a></li>
-          <li class="footer-aside__item"><a class="footer-aside__link" href="#">В кредит</a></li>
-        </ul>
-      </div>
-      <div class="footer-aside-wrapper">
-        <div class="footer-aside__heading">Контактная информация</div>
-        <address class="footer-aside__address">
-          <a class="footer-aside__link" href="tel:+74996549879">Телефон:8(499)654-98-79</a>
-          <a class="footer-aside__link" href="mailto:info@nalabuten.ah">info@nalabuten.ah</a>
-          <div class="footer-aside__address">г.Москва Фантастический проезд д.234</div>
-        </address>
-      </div>
-    </aside>
     <small class="footer-copyright">&copy; Nalabuten.ah 2017</small>
   </footer>
 </body>
